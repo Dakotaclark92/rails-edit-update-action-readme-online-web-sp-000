@@ -18,6 +18,8 @@ class ArticlesController < ApplicationController
     @article.save
     redirect_to article_path(@article)
   end
+  
+  get 'articles/:id/edit', to: 'articles#edit', as: :edit_article
 
   # add edit and update methods here
 end
